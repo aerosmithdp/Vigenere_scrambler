@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Vigenère_scrambler
 {
@@ -7,9 +6,9 @@ namespace Vigenère_scrambler
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the value you want to encrypt(only latin letters a-z): ");
+            Console.Write("Enter the value for encryption(only latin letters a-z): ");
             string valueForEncrypt = Console.ReadLine().ToLower();
-            Console.Write("Enter a key(only latin letters a-z): ");
+            Console.Write("\nThe key will be used for encryption, then for decryption.\nEnter a key(only latin letters a-z): ");
             string key = Console.ReadLine().ToLower();
 
             int counter = 0;
@@ -32,7 +31,9 @@ namespace Vigenère_scrambler
             }
 
             string encryptedValue = VigenèreСipher.Encrypt(valueForEncrypt, key);
-            Console.Write($"\n\tHere is what you entered encrypted: {encryptedValue}\n");
+            string decryptedValue = VigenèreСipher.Decrypt(encryptedValue, key);
+            Console.Write($"\n\tHere is your encrypted word: {encryptedValue}\n");
+            Console.Write($"\n\tHere is your decrypted word: {decryptedValue}\n");
         }
 
     }

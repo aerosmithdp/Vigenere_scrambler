@@ -15,7 +15,24 @@ namespace Vigenère_scrambler
                 {
                     encryptKey -= 26;
                 }
-                result = result + Dictionaries.dictionary[encryptKey];
+                result += Dictionaries.dictionary[encryptKey];
+            }
+            return result;
+        }
+
+
+        public static string Decrypt(string valueForEncrypt, string key)
+        {
+            string result = "";
+
+            for (int i = 0; i < valueForEncrypt.Length; i++)
+            {
+                int decryptedValue = (Dictionaries.dictionaryReverse[valueForEncrypt[i]] - Dictionaries.dictionaryReverse[key[i]]) + 26;
+                if (decryptedValue > 25)
+                {
+                    decryptedValue -= 26;
+                }
+                result += Dictionaries.dictionary[decryptedValue];
             }
             return result;
         }

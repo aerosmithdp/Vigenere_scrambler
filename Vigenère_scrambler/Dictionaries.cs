@@ -5,7 +5,7 @@ namespace Vigenère_scrambler
     public class Dictionaries
     {
 
-        public static Dictionary<int, char> dictionary = new Dictionary<int, char>()
+        public static Dictionary<int, char> dictionary = new()
         {
             { 0,  'a' },
             { 1,  'b' },
@@ -36,18 +36,18 @@ namespace Vigenère_scrambler
         };
 
 
-        public static Dictionary<char, int> dictionaryReverse = new Dictionary<char, int>()
+        public static Dictionary<char, int> dictionaryReverse = new()
         {
-            { 'a',  0 },
-            { 'b',  1 },
-            { 'c',  2 },
-            { 'd',  3 },
-            { 'e',  4 },
-            { 'f',  5 },
-            { 'g',  6 },
-            { 'h',  7 },
-            { 'i',  8 },
-            { 'j',  9 },
+            { 'a', 0  },
+            { 'b', 1  },
+            { 'c', 2  },
+            { 'd', 3  },
+            { 'e', 4  },
+            { 'f', 5  },
+            { 'g', 6  },
+            { 'h', 7  },
+            { 'i', 8  },
+            { 'j', 9  },
             { 'k', 10 },
             { 'l', 11 },
             { 'm', 12 },
