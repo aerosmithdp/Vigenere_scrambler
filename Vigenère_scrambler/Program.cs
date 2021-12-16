@@ -32,8 +32,8 @@ namespace Vigenère_scrambler
 
             string encryptedValue = VigenèreСipher.Encrypt(valueForEncrypt, key);
             string decryptedValue = VigenèreСipher.Decrypt(encryptedValue, key);
-            Console.Write($"\n\tHere is your encrypted word: {encryptedValue}\n");
-            Console.Write($"\n\tHere is your decrypted word: {decryptedValue}\n");
+            Console.Write($"\n\tHere is your encrypted value: {encryptedValue}");
+            Console.Write($"\n\tHere is your decrypted value: {decryptedValue}\n");
         }
 
     }

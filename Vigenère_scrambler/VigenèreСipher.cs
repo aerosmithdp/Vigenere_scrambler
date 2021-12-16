@@ -6,7 +6,7 @@ namespace Vigenère_scrambler
     {
         public static string Encrypt(string valueForEncrypt, string key)
         {
-            string result = "";
+            string result = null;
 
             for (int i = 0; i < valueForEncrypt.Length; i++)
             {
@@ -23,7 +23,7 @@ namespace Vigenère_scrambler
 
         public static string Decrypt(string valueForEncrypt, string key)
         {
-            string result = "";
+            string result = null;
 
             for (int i = 0; i < valueForEncrypt.Length; i++)
             {
